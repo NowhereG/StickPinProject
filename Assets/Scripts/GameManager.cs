@@ -5,12 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //针
     public GameObject pinPrefab;
+    //创建位置
     public Transform createPoint;
+    //发射位置
     public Transform startPoint;
+    //实例化出来的针
     private GameObject createdPin;
+    //游戏结束的动画速度
     public int animationSpeed = 3;
+    //游戏是否结束
     private bool isGameOver = false;
+    //主摄像机
     private Camera mainCamera;
     // Start is called before the first frame update
     void Start()
@@ -59,7 +66,7 @@ public class GameManager : MonoBehaviour
         {
             //停止旋转
             GameObject.Find("Circle").GetComponent<Circle>().enabled = false;
-            //延迟调用重新加载界面方法
+            //延迟2s后调用重新加载界面方法
             Invoke("LoadScene", 2f);
             //设置标志位
             isGameOver = true;

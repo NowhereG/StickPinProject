@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PinController : MonoBehaviour
 {
+    
     //发射的位置
     public Transform startPoint;
     //创建的位置
